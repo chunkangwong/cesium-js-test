@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "npm run build:cesium && tsc && vite build",
+    "preview": "vite preview",
+    "build:cesium": "mkdir -p public/cesium && cp -r node_modules/cesium/Build/Cesium/* public/cesium/"
   },
   "devDependencies": {
     "typescript": "~5.8.3",
